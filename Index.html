@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Babu Reddy T S | Portfolio</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", Arial;
+}
+
+body{
+  background: radial-gradient(circle at top, #0b1220, #050914);
+  color:#e5e7eb;
+  line-height:1.7;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:18px;
+  background:#0f172a;
+  border-bottom:1px solid #1f2937;
+}
+
+header h1{
+  color:#60a5fa;
+  letter-spacing:1px;
+}
+
+.contact-bar{
+  margin-top:6px;
+  font-size:13px;
+  color:#9ca3af;
+}
+
+.contact-bar a{
+  color:#60a5fa;
+  text-decoration:none;
+  margin:0 6px;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:70px 20px;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+/* IMAGE BOX WITH CURVED → CIRCLE ANIMATION */
+.img-box{
+  position:relative;
+  width:270px;
+  height:330px;
+  overflow:hidden;
+  border:2px solid #1f2937;
+  box-shadow:0 20px 50px rgba(0,0,0,0.6);
+
+  border-radius:18px; /* starting shape: curved square */
+  transition: all 0.8s ease;
+}
+
+/* IMAGE */
+.img-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* MOVING SHADE */
+.img-shade{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: linear-gradient(
+    120deg,
+    rgba(11,18,32,0.85),
+    rgba(11,18,32,0.2),
+    rgba(11,18,32,0.85)
+  );
+  background-size:200% 200%;
+  animation: shadeMove 5s linear infinite;
+  pointer-events:none;
+}
+
+/* TEXT */
+.hero-text{
+  max-width:650px;
+}
+
+.hero-text h2{
+  font-size:40px;
+  color:#60a5fa;
+}
+
+.hero-text p{
+  margin-top:10px;
+  color:#cbd5e1;
+}
+
+/* SECTIONS */
+section{
+  max-width:950px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+h2{
+  color:#60a5fa;
+  margin-bottom:12px;
+}
+
+.card{
+  background:#0f172a;
+  border:1px solid #1f2937;
+  padding:18px;
+  border-radius:12px;
+  margin-bottom:12px;
+
+  opacity:0;
+  transform:translateY(25px);
+  transition:0.6s;
+}
+
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* CONTACT */
+.contact-box{
+  text-align:center;
+  padding:18px;
+  border:1px solid #1f2937;
+  border-radius:12px;
+}
+
+/* RESUME BUTTON */
+.resume-section{
+  text-align:center;
+  padding:40px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  background:linear-gradient(90deg,#2563eb,#3b82f6);
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.08);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:15px;
+  font-size:12px;
+  color:#9ca3af;
+  background:#0f172a;
+  border-top:1px solid #1f2937;
+}
+
+/* ANIMATIONS */
+@keyframes shadeMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* FLOAT TEXT FEEL */
+.hero-text{
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>BABU REDDY T S</h1>
+
+  <div class="contact-bar">
+    📧 babureddy18042006@gmail.com |
+    📞 8105952447 |
+    <a href="https://github.com" target="_blank">GitHub</a> |
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+
+  <div class="img-box" id="imgBox">
+    <img src="./profile.jpeg" alt="Profile">
+    <div class="img-shade"></div>
+  </div>
+
+  <div class="hero-text">
+    <h2>Aspiring Data Analyst & Full Stack Developer</h2>
+
+    <p>
+      I am a passionate developer focused on building intelligent, scalable digital systems
+      that convert raw data into meaningful insights using analytics and machine learning.
+    </p>
+
+    <p>
+      I enjoy designing and developing end-to-end applications that combine frontend,
+      backend, and data processing into a seamless user experience.
+    </p>
+
+    <p>
+      My goal is to become a strong software engineer capable of building impactful real-world products.
+    </p>
+  </div>
+
+</div>
+
+<!-- PROFILE -->
+<section>
+<h2>Profile</h2>
+<div class="card">
+I am an Information Science Engineering student with strong interest in software development, data analytics, and machine learning.
+
+<br><br>
+
+I specialize in building full-stack applications and data-driven systems that transform raw information into useful insights.
+
+<br><br>
+
+I focus on clean architecture, scalable code, and real-world problem solving through projects and hackathons.
+</div>
+</section>
+
+<!-- PROJECT -->
+<section>
+<h2>Project</h2>
+
+<div class="card">
+<b>Stock Analytics Pro</b><br><br>
+
+A professional stock market analytics system designed to simplify financial data through visualization and insights.
+
+<br><br>
+
+It converts complex stock data into interactive dashboards, charts, and analytical reports to help users understand trends easily.
+
+<ul>
+  <li>Real-time analytics dashboard</li>
+  <li>Interactive data visualization</li>
+  <li>AI-based insights generation</li>
+  <li>PDF report export feature</li>
+</ul>
+
+<a href="https://stockanalyticsprobykotha18.streamlit.app/" target="_blank">
+🔗 Live Project
+</a>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+<h2>Experience</h2>
+<div class="card">
+Worked on academic and personal projects in full-stack development and data analytics using Python, JavaScript, and modern frameworks.
+</div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section>
+<h2>Achievements</h2>
+<div class="card">
+<ul>
+  <li>Smart India Hackathon 2025 – Top 50 Teams</li>
+  <li>IoT Certification</li>
+  <li>Hackathon Participation</li>
+</ul>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<h2>Contact</h2>
+<div class="contact-box">
+📧 Email: babureddy18042006@gmail.com <br><br>
+📞 Phone: 8105952447 <br><br>
+🔗 <a href="https://github.com" target="_blank">GitHub</a> |
+🔗 <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+</div>
+</section>
+
+<!-- RESUME DOWNLOAD -->
+<div class="resume-section">
+  <a href="./resume.pdf" class="btn" download>
+    📄 Download Resume
+  </a>
+</div>
+
+<footer>
+© 2026 Babu Reddy T S | Fully Furnished Portfolio
+</footer>
+
+<script>
+/* scroll animation cards */
+const cards = document.querySelectorAll(".card");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{threshold:0.15});
+
+cards.forEach(card=>observer.observe(card));
+
+/* CURVED → CIRCLE EFFECT ON SCROLL */
+const imgBox = document.getElementById("imgBox");
+
+window.addEventListener("scroll", () => {
+  let scrollY = window.scrollY;
+
+  if(scrollY > 100){
+    imgBox.style.borderRadius = "50%";
+    imgBox.style.transform = "scale(0.95)";
+  } else {
+    imgBox.style.borderRadius = "18px";
+    imgBox.style.transform = "scale(1)";
+  }
+});
+</script>
+
+</body>
+</html>
